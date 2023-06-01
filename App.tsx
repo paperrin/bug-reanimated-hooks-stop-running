@@ -7,7 +7,6 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
@@ -20,7 +19,7 @@ import Animated, {
   useDerivedValue,
 } from 'react-native-reanimated';
 
-const App: () => Node = () => {
+const App = () => {
   const scale = useSharedValue(1);
   scale.value = withRepeat(
     withTiming(2, {
