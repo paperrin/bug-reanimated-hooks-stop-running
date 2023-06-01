@@ -17,6 +17,7 @@ import Animated, {
   withRepeat,
   withTiming,
   Easing,
+  useDerivedValue,
 } from 'react-native-reanimated';
 
 const App: () => Node = () => {
@@ -39,6 +40,10 @@ const App: () => Node = () => {
       ],
     };
   });
+
+  useDerivedValue(() => {
+    console.log(scale.value)
+  })
 
   return (
     <SafeAreaView style={styles.background}>
